@@ -1,0 +1,253 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    /* background-color: rgb(248, 236, 219); */
+    /* font-size: 15px; */
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow:  hidden none;
+    background-image: url(images/cake17.jpg);
+    color: #111;
+    background-repeat: repeat-y;
+    background-position: auto;
+    background-size: cover;
+    background-image: linear-gradient(to right, white,black,white); 
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header .logoArt{
+    width:90px;
+    padding: 10px 10px;
+}
+header .burger-nav .line{
+    width: 15px;
+    height: 2px;
+    background-color: crimson;
+    margin: 4px 0px;
+
+}
+img:hover{
+    transform: scale(1.2);
+    border-radius: 12px;
+}
+/* ABOUT US */
+.slider-imgs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    background-image: url(images/cake13.jpg);
+    background-repeat: repeat-x;
+    background-position:center ; 
+}
+.slider-imgs img{
+    display: none;
+    width: 75%;
+    /* height: 180px; */
+    margin: 10px auto 20px;
+}
+.slider-imgs img:hover{
+    transform: scale(1);
+}
+.slider-imgs .about{
+    text-align: center;
+    margin: 20px 50px;
+    width: 75%;
+    height: 180px;
+    background-color: rgb(216, 140, 156);
+
+}
+.slider-imgs .action-btns{
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.slider-imgs .action-btns button,button{
+   padding: 4px 14px;
+   border-radius: 12px;
+   background-color: rgb(235, 189, 39);
+   outline: none;
+   font-weight: 600;
+   margin: 10px;    
+   border: 1px solid rgb(65, 102, 10);
+
+
+}
+.slider-imgs .action-btns button:hover,button:hover{
+    background-color: #f5b35e;
+}
+.blinky{
+    display: none;
+    animation: blink .7s infinite;
+}
+@keyframes blink{
+0%{
+    background-color: rgb(235, 189, 39);
+}
+50%{
+    background-color: rgb(235, 85, 39);
+}
+0%{
+    background-color: rgb(215, 252, 6);
+    border: 1px solid greenyellow;
+}
+}
+/* SAMPLE PRODUCTS */ 
+.sample-images img{
+    max-width: 100px;
+    margin: 20px;
+}
+.sample-images{
+    display: flex;
+    flex-wrap: wrap;
+
+     background-image: linear-gradient(to top, rgba(255, 255, 255,.5),rgba(10, 4, 4,.5),rgba(255, 255, 255,.5)); 
+
+}
+.show-samples{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SOCIAL CONTACTS */
+.socialBtns{
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-image: linear-gradient(to top, rgb(52, 39, 235),rgb(79, 73, 168)); */
+
+}
+
+/* COPYRIGHT */
+footer{
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    width: 100vw;
+    height: 100px;
+    color: rgb(15, 7, 121);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 0px rgb(37, 47, 49);
+    background-image: linear-gradient(to right,rgb(255, 254, 253), rgb(98, 70, 105),rgb(248, 247, 246));
+    margin: auto auto;
+}
+@media (min-width:630px){
+    body{
+        font-size:15px;
+        margin: auto 50px;
+        background-image: url(images/cake17.jpg);
+
+    }
+    header{
+       line-height: 60px;
+
+    
+    }
+    header .logoArt{
+        width:120px;
+        padding: 20px 10px;
+    }
+    
+    header .burger-nav .line{
+        width: 25px;
+        height: 3px;
+        background-color: crimson;
+        margin:0
+    } 
+    header .burger-nav .line1{
+        margin-top: 0;
+    }
+    header .burger-nav .line2{
+        margin-top: 5px;
+
+    }
+    header .burger-nav .line3{
+        margin-top: 5px;
+
+    }
+    .slider-imgs{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
+    .slider-imgs img{
+        display: block;
+        width: 270px;
+        margin-left:0;
+    }
+    .slider-imgs .about{
+        text-align: center;
+        margin: 50px auto;
+        padding: 1%;
+    }
+    .slider-imgs .action-btns{
+     display: flex;
+     
+    
+    }
+    
+    .slider-imgs .action-btns button,button{
+       padding: 4px 14px;
+       border-radius: 12px;
+       background-color: #ff9100;
+       outline: none;
+       font-weight: 600;
+       margin: 10px;
+    
+    }
+    .blinky{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin: 50px auto;
+    }
+    .slider-imgs .action-btns button:hover,button:hover{
+        background-color: #f5b35e;
+    }
+
+    .sample-images{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
+        margin: auto;
+    }
+    .sample-images img{
+        /* width: 200px;
+        margin: 20px; */
+    }
+    
+    .show-samples{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    @media (min-width:1200px){
+        body{
+            padding:auto 100px 0;
+            font-size:24px;
+        }
+        .slider-imgs img{
+            width: 450px;
+            height: auto;
+            margin-left:0;
+        }
+
+    }
